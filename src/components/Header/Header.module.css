@@ -1,0 +1,52 @@
+:global(.navbar) {
+  --bs-navbar-active-color: rgb(16, 185, 129);
+  --bs-navbar-color: white;
+  --bs-navbar-brand-color: white;
+  background-color: #265dad;
+}
+
+:global(.navbar-toggler-icon) {
+  filter: invert(1) brightness(1.1);
+}
+:global(.navbar-nav) {
+  --bs-nav-link-hover-color: rgb(16, 185, 129);
+  font-weight: bold;
+}
+/*Animation for nav links only*/
+a:not(.logo) {
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+a:not(.logo)::before,
+a:not(.logo)::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981, #3b82f6);
+  transition: all 0.5s;
+}
+a:not(.logo)::before {
+  top: 0;
+  left: 0;
+}
+a:not(.logo)::after {
+  bottom: 0;
+  right: 0;
+}
+a:not(.logo):hover::before {
+  width: 100%;
+  transition: width 0.25s ease-in-out;
+}
+a:not(.logo):hover::after {
+  width: 100%;
+  transition: width 0.25s ease-in-out 0.25s;
+}
+/*Set white color for logo*/
+:global(.navbar-brand) {
+  color: white;
+}
+:global(.navbar-brand):hover {
+  color: white;
+}
