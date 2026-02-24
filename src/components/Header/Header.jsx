@@ -12,8 +12,8 @@ export default function Header() {
             {"<HenryHuynh />"}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto gap-2">
+          <Navbar.Collapse id="basic-navbar-nav" className="mt-2 mt-lg-0">
+            <Nav className="ms-auto gap-lg-2  ">
               <Nav.Link href="#home">Home</Nav.Link>
               <Nav.Link href="#about">About</Nav.Link>
               <Nav.Link href="#project">Project</Nav.Link>
