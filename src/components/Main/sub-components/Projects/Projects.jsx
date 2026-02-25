@@ -30,7 +30,9 @@ export default function Projects() {
       <div
         className={`${styles["projects-section"]} container d-flex flex-column  gap-3 p-4`}
       >
-        <h2 className="fs-2 fw-bold text-center">{"<Projects />"}</h2>
+        <h2 className={`${styles["projects-title"]} fs-2 fw-bold text-center`}>
+          {"<Projects />"}
+        </h2>
         <div className={styles["cards-grid"]}>
           {projects.map((project, index) => (
             <ProjectCard

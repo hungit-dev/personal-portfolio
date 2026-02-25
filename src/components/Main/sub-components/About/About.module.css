@@ -1,13 +1,18 @@
 .about-section {
-    background-color: var(--primary-bg-color);
-    color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
 }
-
+.about-title {
+  background: linear-gradient(90deg, #265dad, #37c5f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .skills-list {
-    padding: 0;
-    list-style-type: none;
+  padding: 0;
+  list-style-type: none;
 }
 
 .about-section p {
-    font-size: 18px;
+  font-size: 18px;
 }

@@ -1,32 +1,30 @@
 .hero-section {
-    min-height: 60vh;
-    background-color: var(--primary-bg-color);
-    color: var(--primary-text-color);
-
+  min-height: 85vh;
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
 }
 
 .gradient-text {
-    background: linear-gradient(90deg, #265dad, #37c5f0);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(90deg, #265dad, #37c5f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .span-marker {
-    margin-right: 1rem;
-    animation: blink 1.5s infinite;
+  margin-right: 1rem;
+  animation: blink 1.5s infinite;
 }
 
 /*blink effect for the span marker*/
 @keyframes blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
 
-    0%,
-    49% {
-        opacity: 1;
-    }
-
-    50%,
-    100% {
-        opacity: 0;
-    }
+  50%,
+  100% {
+    opacity: 0;
+  }
 }

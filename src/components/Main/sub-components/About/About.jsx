@@ -6,7 +6,9 @@ export default function About() {
       <div
         className={`${styles["about-section"]} container d-flex flex-column   gap-3 p-4`}
       >
-        <h2 className="fs-2 fw-bold text-center">{"<About Me />"}</h2>
+        <h2 className={`${styles["about-title"]} fs-2 fw-bold text-center`}>
+          {"<About Me />"}
+        </h2>
         <p>
           I'm a passionate web developer focused on building clean, functional
           applications with JavaScript. My journey into coding started with

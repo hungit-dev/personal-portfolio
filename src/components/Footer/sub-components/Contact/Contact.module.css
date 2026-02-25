@@ -1,13 +1,18 @@
 .contact-section {
-    padding: 1rem;
+  padding: 1rem;
 }
-
+.contact-title {
+  background: linear-gradient(90deg, #265dad, #37c5f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .social-media-icons svg {
-    width: 32px;
-    height: 32px;
-    color: var(--icon-color);
+  width: 32px;
+  height: 32px;
+  color: var(--icon-color);
 }
 
 .social-media-icons svg :hover {
-    cursor: pointer;
+  cursor: pointer;
 }
