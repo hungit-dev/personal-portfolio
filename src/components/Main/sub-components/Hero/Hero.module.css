@@ -1,12 +1,14 @@
 .hero-section {
     min-height: 60vh;
-    background-color: #EFF9FA;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
 
 }
 
 .gradient-text {
     background: linear-gradient(90deg, #265dad, #37c5f0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 

@@ -2,19 +2,71 @@
     box-sizing: border-box;
 }
 
+/*Global styles*/
+:root {
+    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    --primary-button-bg: linear-gradient(90deg, #1e4a8a, #1ea6c8);
+}
+
+/* Navbar styles */
 :root {
     --nav-text-hover-color: #10b981;
-    --primary-button-bg: linear-gradient(90deg, #1e4a8a, #1ea6c8);
     --nav-text-color: white;
-    --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    --primary-bg-color: #F5F5F5
+}
+
+:root[data-bs-theme="dark"] {
+    --nav-bg-color: #0C0C0C;
+    --glassy-bg-color: rgba(12, 12, 12, 0.6);
+    --glassy-border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    --glassy-text-color: white;
+}
+
+:root[data-bs-theme="light"] {
+    --nav-bg-color: #265dad;
+    --glassy-bg-color: rgba(255, 255, 255, 0.6);
+    --glassy-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    --glassy-text-color: black;
+}
+
+
+/* Text and background colors for global theme styles*/
+:root[data-bs-theme="dark"] {
+    --primary-bg-color: #000000;
+    --primary-text-color: white;
+}
+
+:root[data-bs-theme="light"] {
+    --primary-bg-color: #F5F5F5;
+    --primary-text-color: black;
 }
 
 body {
     background-color: var(--primary-bg-color);
 }
 
-/* Override Bootstrap primary button styles */
+/* Note styles */
+:root[data-bs-theme="dark"] {
+    --note-bg-color: #2c3035
+}
+
+:root[data-bs-theme="light"] {
+    --note-bg-color: #fffbeb
+}
+
+/* Card styles */
+:root[data-bs-theme="dark"] {
+    --card-bg-color: #171717;
+    --card-text-color: white;
+    --card-border: 1px solid rgb(229, 231, 235);
+}
+
+:root[data-bs-theme="light"] {
+    --card-bg-color: #FDFDFE;
+    --card-border: 1px solid #e2e8f0;
+    --card-text: black;
+}
+
+/* Override Global Bootstrap primary button styles */
 .btn-primary {
     --bs-btn-border-color: var(--primary-button-bg);
     background: var(--primary-button-bg);
@@ -26,4 +78,13 @@ body {
 .btn-primary:hover {
     transform: scale(1.1);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*Social media icons */
+:root[data-bs-theme="dark"] {
+    --social-icon-color: white;
+}
+
+:root[data-bs-theme="light"] {
+    --social-icon-color: black;
 }

@@ -1,5 +1,5 @@
 .note {
-    background-color: #fffbeb;
+    background-color: var(--note-bg-color);
     border-left: 3px solid #f59e0b;
     padding: 0.5rem;
     border-radius: 4px;
@@ -29,6 +29,7 @@
 :global(.card-body) {
     display: flex;
     flex-direction: column;
+    background-color: var(--card-bg-color);
 }
 
 .buttons-group {
@@ -42,17 +43,6 @@
     object-fit: cover;
 }
 
-.card-live-button {
-    cursor: pointer;
-    position: relative;
-    transition: 0.5s;
-    background: transparent;
-    border: 1px solid black;
-    border-radius: 4px;
-    color: black;
-    --bs-btn-active-bg: white !important;
-    --bs-btn-active-border-color: black !important;
-}
 
 /*Hover effect for github btn*/
 .card-github-button {
@@ -66,6 +56,28 @@
 }
 
 /*Hover effect for live btn*/
+:global(:root[data-bs-theme="dark"]) .card-live-button {
+    --live-btn-border: 1px solid white;
+    --live-btn-text-color: white;
+}
+
+:global(:root[data-bs-theme="light"]) .card-live-button {
+    --live-btn-text-color: black;
+    --live-btn-border: 1px solid black;
+}
+
+.card-live-button {
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
+    background: transparent;
+    border: var(--live-btn-border);
+    border-radius: 4px;
+    color: var(--live-btn-text-color);
+    --bs-btn-active-bg: white !important;
+    --bs-btn-active-border-color: black !important;
+}
+
 .card-live-button:after {
     content: "»";
     position: absolute;
@@ -80,8 +92,8 @@
     padding-right: 34px;
     padding-left: 8px;
     background-color: transparent;
-    border: 1px solid black;
-    color: black;
+    border: var(--live-btn-border);
+    color: var(--live-btn-text-color);
 }
 
 .card-live-button:hover:after {

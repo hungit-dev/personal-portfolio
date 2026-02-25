@@ -2,7 +2,7 @@
     padding: 0.75rem;
     border-radius: 8px;
     font-weight: 500;
-    color: #1e293b;
-    background-color: #FDFDFE;
-    border: 1px solid #e2e8f0;
+    color: var(--card-text);
+    background-color: var(--card-bg-color);
+    border: var(--card-border);
 }
