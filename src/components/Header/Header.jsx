@@ -6,7 +6,7 @@ import styles from "./Header.module.css";
 export default function Header() {
   return (
     <header>
-      <Navbar expand="lg" className={`${styles.navbar} p-3`}>
+      <Navbar expand="lg" className={`${styles.navbar} p-3 fixed-top`}>
         <Container>
           <Navbar.Brand href="#home" className={styles.logo}>
             {"<HenryHuynh />"}

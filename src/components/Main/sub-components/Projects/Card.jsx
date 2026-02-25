@@ -5,7 +5,7 @@ export default function ProjectCard({ title="Project Title", description="Projec
     return (
         <>
     <Card >
-        <Card.Img variant="top" src="https://external-preview.redd.it/Gvoie4igJZoCko89KahEI7BpLvkO2aqIvTL0MJkpACQ.jpg?width=1080&crop=smart&auto=webp&s=b12a39d0572f148250b143bc2166e8cc19485e50" />
+        <Card.Img variant="top" src="https://external-preview.redd.it/Gvoie4igJZoCko89KahEI7BpLvkO2aqIvTL0MJkpACQ.jpg?width=1080&crop=smart&auto=webp&s=b12a39d0572f148250b143bc2166e8cc19485e50" className={styles["card-img"]}/>
         <Card.Body>
             <Card.Title className='fs-4 fw-bold'>{title}</Card.Title>
             <Card.Text>

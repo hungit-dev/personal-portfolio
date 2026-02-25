@@ -4,7 +4,7 @@ import Projects from "./sub-components/Projects/Projects"
 export default function Main() {
     return (
         <>
-        <div className="p-5">
+        <div className="pb-5">
         <Hero />
         <About />
         <Projects />
