@@ -1,7 +1,7 @@
 import styles from "./Contact.module.css";
 export default function Contact() {
     return (
-        <div className={`${styles["contact-section"]} container-sm`}>
+        <div className={`${styles["contact-section"]} container`}>
             <h2 className="text-center">Contact</h2>
             <p className="text-center">Have a question or want to work together?</p>
             <p className="text-center">

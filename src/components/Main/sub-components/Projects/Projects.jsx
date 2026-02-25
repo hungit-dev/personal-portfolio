@@ -27,7 +27,7 @@ const projects = [
 export default function Projects(){
     return (
         <>
-        <div className={`${styles["projects-section"]} container-sm d-flex flex-column  gap-3 p-4`}>
+        <div className={`${styles["projects-section"]} container d-flex flex-column  gap-3 p-4`}>
             <h2 className="fs-2 fw-bold text-center">Projects</h2>
             <div className={styles["cards-grid"]}>
             {projects.map((project, index) => (
