@@ -3,8 +3,8 @@ import Skill from "./Skill";
 export default function About() {
   return (
     <>
-      <div
-        className={`${styles["about-section"]} container d-flex flex-column   gap-3 p-4`}
+      <section
+        id="about" className={`${styles["about-section"]} container d-flex flex-column   gap-3 p-4`}
       >
         <h2 className={`${styles["about-title"]} fs-2 fw-bold text-center`}>
           {"<About Me />"}
@@ -31,7 +31,7 @@ export default function About() {
           <Skill skillName="VS Code" />
           <Skill skillName="Bootstrap" />
         </ul>
-      </div>
+      </section>
     </>
   );
 }

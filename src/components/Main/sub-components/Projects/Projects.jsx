@@ -23,11 +23,25 @@ const projects = [
     note: "Powered by OpenWeatherMap API.",
     techList: ["React", "API", "CSS"],
   },
+  {
+  title: "Task Manager App",
+  description: "Allows users to create, edit, and delete daily tasks.",
+  reason: "Practiced state management and component reusability.",
+  note: "Data is stored using localStorage.",
+  techList: ["React", "JavaScript", "Bootstrap"],
+},
+{
+  title: "Movie Search App",
+  description: "Searches movies and displays detailed information like ratings and release dates.",
+  reason: "Improved skills in working with APIs and handling async data.",
+  note: "Powered by the TMDB API.",
+  techList: ["React", "API", "Bootstrap"],
+},
 ];
 export default function Projects() {
   return (
     <>
-      <div
+      <section id="projects"
         className={`${styles["projects-section"]} container d-flex flex-column  gap-3 p-4`}
       >
         <h2 className={`${styles["projects-title"]} fs-2 fw-bold text-center`}>
@@ -45,7 +59,7 @@ export default function Projects() {
             />
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 }

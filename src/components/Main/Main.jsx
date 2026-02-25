@@ -4,11 +4,11 @@ import Projects from "./sub-components/Projects/Projects"
 export default function Main() {
     return (
         <>
-        <div className="pb-5">
+        <main className="pb-5">
         <Hero />
         <About />
         <Projects />
-        </div>
+        </main>
         </>
     )
 }

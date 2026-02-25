@@ -1,7 +1,7 @@
 import styles from "./Contact.module.css";
 export default function Contact() {
   return (
-    <div className={`${styles["contact-section"]} container`}>
+    <section id="contact" className={`${styles["contact-section"]} container`}>
       <h2 className={`${styles["contact-title"]} text-center fw-bold`}>
         {"<Contact />"}
       </h2>
@@ -55,6 +55,6 @@ export default function Contact() {
           </svg>
         </a>
       </div>
-    </div>
+    </section>
   );
 }
