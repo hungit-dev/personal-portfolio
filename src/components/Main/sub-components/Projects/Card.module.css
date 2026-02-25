@@ -46,7 +46,7 @@
     cursor: pointer;
     position: relative;
     transition: 0.5s;
-    background-color: transparent;
+    background: transparent;
     border: 1px solid black;
     border-radius: 4px;
     color: black;
@@ -57,10 +57,12 @@
 /*Hover effect for github btn*/
 .card-github-button {
     --bs-btn-hover-bg: transparent !important;
+    background: #265DAD;
 }
 
 .card-github-button:hover {
-    color: var(--primary-button-bg);
+    color: #265DAD;
+    --bs-btn-border-color: #265DAD;
 }
 
 /*Hover effect for live btn*/

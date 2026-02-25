@@ -3,7 +3,7 @@
   --bs-navbar-active-color: var(--nav-text-hover-color);
   --bs-navbar-color: var(--nav-text-color);
   --bs-navbar-brand-color: var(--nav-text-color);
-  background-color: var(--primary-button-bg);
+  background-color: #265dad;
   transition: all 0.3s ease;
 }
 

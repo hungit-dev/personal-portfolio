@@ -4,9 +4,8 @@
 
 :root {
     --nav-text-hover-color: #10b981;
-    --primary-button-bg: #265dad;
+    --primary-button-bg: linear-gradient(90deg, #1e4a8a, #1ea6c8);
     --nav-text-color: white;
-    --container-max-width: 960px;
     --box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     --primary-bg-color: #F5F5F5
 }
@@ -18,7 +17,7 @@ body {
 /* Override Bootstrap primary button styles */
 .btn-primary {
     --bs-btn-border-color: var(--primary-button-bg);
-    --bs-btn-bg: var(--primary-button-bg);
+    background: var(--primary-button-bg);
     --bs-btn-hover-bg: var(--primary-button-bg);
     transition: transform 0.3s ease, box-shadow 0.2s ease;
     width: 150px;
