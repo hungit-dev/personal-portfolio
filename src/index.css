@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --nav-text-hover-color: #10b981;
+    --primary-button-bg: #265dad;
+    --nav-text-color: white;
+    --container-max-width: 960px;
+}
+
+/* Override Bootstrap primary button styles */
+.btn-primary {
+    --bs-btn-bg: var(--primary-button-bg);
+    --bs-btn-hover-bg: var(--primary-button-bg);
+    transition: transform 0.3s ease, box-shadow 0.2s ease;
+    width: 150px;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}

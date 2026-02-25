@@ -1,17 +1,5 @@
 .hero-section {
     min-height: 60vh;
     background-color: #EFF9FA;
-}
-
-/* Override Bootstrap primary button styles */
-:global(.btn-primary) {
-    --bs-btn-bg: #265DAD;
-    --bs-btn-hover-bg: #265DAD;
-    transition: transform 0.3s ease, box-shadow 0.2s ease;
-    width: 150px;
-}
-
-:global(.btn-primary:hover) {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 8px;
 }

@@ -1,0 +1,45 @@
+.note {
+    background-color: #fffbeb;
+    border-left: 3px solid #f59e0b;
+    padding: 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tech-tag {
+    padding: 0.25rem 0.75rem;
+    background: linear-gradient(135deg, #f0fdf4, #eff6ff);
+    color: #1e293b;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'Courier New', monospace;
+    display: inline-block;
+}
+
+.buttons-group {
+    display: flex;
+    gap: 10px;
+}
+
+.card-live-button {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
+    color: black;
+}
+
+.card-live-button:hover {
+    background-color: white;
+    border: 0;
+    color: black;
+}

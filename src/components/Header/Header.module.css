@@ -1,17 +1,19 @@
 /*Override Bootstrap navbar styles*/
 :global(.navbar) {
-  --bs-navbar-active-color: rgb(16, 185, 129);
-  --bs-navbar-color: white;
-  --bs-navbar-brand-color: white;
-  background-color: #265dad;
+  --bs-navbar-active-color: var(--nav-text-hover-color);
+  --bs-navbar-color: var(--nav-text-color);
+  --bs-navbar-brand-color: var(--nav-text-color);
+  background-color: var(--primary-button-bg);
 }
+
+
 
 :global(.navbar-toggler-icon) {
   filter: invert(1) brightness(1.1);
 }
 
 :global(.navbar-nav) {
-  --bs-nav-link-hover-color: rgb(16, 185, 129);
+  --bs-nav-link-hover-color: var(--primary-color);
 }
 
 /*Animation for nav links only*/
@@ -19,6 +21,11 @@ a:not(.logo) {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  color: var(--nav-text-color);
+}
+
+a:not(.logo):hover {
+  color: var(--nav-text-hover-color);
 }
 
 a:not(.logo)::before,

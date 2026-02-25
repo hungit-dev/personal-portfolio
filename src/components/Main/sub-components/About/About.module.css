@@ -1,5 +1,5 @@
 .about-section {
-    max-width: 960px;
+    max-width: var(--container-max-width);
 }
 
 .skills-list {
