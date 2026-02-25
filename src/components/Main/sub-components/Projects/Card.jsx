@@ -23,7 +23,7 @@ export default function ProjectCard({ title="Project Title", description="Projec
                 ))}
             </div>
             <div className={styles["buttons-group"]}>
-                 <Button  className={styles["card-github-button"]}>Github</Button>
+                 <Button  className={`${styles["card-github-button"]} me-2`}>Github</Button>
                  <Button  className={styles["card-live-button"]}>Demo &rarr;</Button>
             </div>
         </Card.Body>

@@ -1,0 +1,13 @@
+.contact-section {
+    max-width: var(--container-max-width);
+    padding: 1rem;
+}
+
+.social-media-icons svg {
+    width: 32px;
+    height: 32px;
+}
+
+.social-media-icons svg :hover {
+    cursor: pointer;
+}

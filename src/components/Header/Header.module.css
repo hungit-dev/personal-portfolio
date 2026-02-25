@@ -4,6 +4,7 @@
   --bs-navbar-color: var(--nav-text-color);
   --bs-navbar-brand-color: var(--nav-text-color);
   background-color: var(--primary-button-bg);
+
 }
 
 
@@ -17,19 +18,19 @@
 }
 
 /*Animation for nav links only*/
-a:not(.logo) {
+a.nav-link-item {
   text-decoration: none;
   position: relative;
   overflow: hidden;
   color: var(--nav-text-color);
 }
 
-a:not(.logo):hover {
+a.nav-link-item:hover {
   color: var(--nav-text-hover-color);
 }
 
-a:not(.logo)::before,
-a:not(.logo)::after {
+a.nav-link-item::before,
+a.nav-link-item::after {
   content: "";
   position: absolute;
   width: 0;
@@ -38,22 +39,22 @@ a:not(.logo)::after {
   transition: all 0.5s;
 }
 
-a:not(.logo)::before {
+a.nav-link-item::before {
   top: 0;
   left: 0;
 }
 
-a:not(.logo)::after {
+a.nav-link-item::after {
   bottom: 0;
   right: 0;
 }
 
-a:not(.logo):hover::before {
+a.nav-link-item:hover::before {
   width: 100%;
   transition: width 0.25s ease-in-out;
 }
 
-a:not(.logo):hover::after {
+a.nav-link-item:hover::after {
   width: 100%;
   transition: width 0.25s ease-in-out 0.25s;
 }
