@@ -43,14 +43,46 @@
 }
 
 .card-live-button {
+    cursor: pointer;
+    position: relative;
+    transition: 0.5s;
     background-color: transparent;
     border: 1px solid black;
     border-radius: 4px;
     color: black;
+    --bs-btn-active-bg: white !important;
+    --bs-btn-active-border-color: black !important;
+}
+
+/*Hover effect for github btn*/
+.card-github-button {
+    --bs-btn-hover-bg: transparent !important;
+}
+
+.card-github-button:hover {
+    color: var(--primary-button-bg);
+}
+
+/*Hover effect for live btn*/
+.card-live-button:after {
+    content: "»";
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    right: -30px;
+    transition: 0.5s;
 }
 
 .card-live-button:hover {
-    background-color: white;
-    border: 0;
+    padding-right: 34px;
+    padding-left: 8px;
+    background-color: transparent;
+    border: 1px solid black;
     color: black;
+}
+
+.card-live-button:hover:after {
+    opacity: 1;
+    right: 25px;
 }

@@ -17,6 +17,7 @@ body {
 
 /* Override Bootstrap primary button styles */
 .btn-primary {
+    --bs-btn-border-color: var(--primary-button-bg);
     --bs-btn-bg: var(--primary-button-bg);
     --bs-btn-hover-bg: var(--primary-button-bg);
     transition: transform 0.3s ease, box-shadow 0.2s ease;
