@@ -41,7 +41,7 @@ export default function Header() {
             <Nav className="ms-auto gap-lg-2  ">
               <Nav.Link href="#home" className={styles["nav-link-item"]}>Home</Nav.Link>
               <Nav.Link href="#about" className={styles["nav-link-item"]}>About</Nav.Link>
-              <Nav.Link href="#projects" className={styles["nav-link-item"]}>Project</Nav.Link>
+              <Nav.Link href="#projects" className={styles["nav-link-item"]}>Projects</Nav.Link>
               <Nav.Link href="#contact" className={styles["nav-link-item"]}>Contact</Nav.Link>
                
             </Nav>
