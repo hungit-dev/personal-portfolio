@@ -14,7 +14,8 @@
   border-bottom: var(--glassy-border-bottom);
 }
 
-:global(.navbar-toggler-icon) {
+/*only text in light mode change color if user scrolls down*/
+:global(:root[data-bs-theme="light"] .navbar-toggler-icon) {
   filter: invert(1) brightness(1.1);
 }
 
@@ -68,13 +69,12 @@ a.nav-link-item:hover::after {
 :global(.navbar-brand) {
   color: white;
   transition: color 0.3s ease;
+  font-weight: bold;
 }
 
 :global(.navbar-brand):hover {
   color: white;
 }
-
-
 
 /*Change styles when the navbar becomes glassy*/
 
@@ -83,11 +83,14 @@ a.nav-link-item:hover::after {
 }
 
 .glassy :global(.navbar-toggler-icon) {
-  filter: invert(0) brightness(1.1);
+  filter: invert(0) brightness(1.1) !important;
 }
 
 .glassy :global(.navbar-brand) {
-  color: var(--glassy-text-color);
+  background: linear-gradient(90deg, #265dad, #37c5f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .glassy a.nav-link-item {
