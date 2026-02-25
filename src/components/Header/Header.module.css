@@ -4,7 +4,14 @@
   --bs-navbar-color: var(--nav-text-color);
   --bs-navbar-brand-color: var(--nav-text-color);
   background-color: var(--primary-button-bg);
+  transition: all 0.3s ease;
+}
 
+.glassy {
+  background-color: rgba(245, 245, 245, 0.6) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 
@@ -62,8 +69,31 @@ a.nav-link-item:hover::after {
 /*Override Bootstrap color for logo*/
 :global(.navbar-brand) {
   color: white;
+  transition: color 0.3s ease;
 }
 
 :global(.navbar-brand):hover {
   color: white;
+}
+
+/*Change styles when the navbar becomes glassy*/
+
+.glassy :global(.navbar-toggler:focus) {
+  box-shadow: 0 0 0 0.25rem rgba(32, 32, 32, 0.25);
+}
+
+.glassy :global(.navbar-toggler-icon) {
+  filter: invert(0) brightness(1.1);
+}
+
+.glassy :global(.navbar-brand) {
+  color: #000;
+}
+
+.glassy a.nav-link-item {
+  color: #000;
+}
+
+.glassy a.nav-link-item:hover {
+  color: var(--nav-text-hover-color);
 }

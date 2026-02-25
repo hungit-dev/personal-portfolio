@@ -2,11 +2,27 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import styles from "./Header.module.css";
+import { useState, useEffect } from "react";
 
 export default function Header() {
+  //implement scroll effect for navbar
+  const [isScrolled, setIsScrolled] = useState(false);
+  //use effect run once when the component mounts
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <header>
-      <Navbar expand="lg" className={`${styles.navbar} p-3 fixed-top`}>
+      <Navbar expand="lg" className={`${styles.navbar} ${isScrolled ? styles.glassy : ""} p-3 fixed-top`}>
         <Container>
           <Navbar.Brand href="#home" className={styles.logo}>
             {"<HenryHuynh />"}
