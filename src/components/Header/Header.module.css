@@ -74,6 +74,8 @@ a.nav-link-item:hover::after {
   color: white;
 }
 
+
+
 /*Change styles when the navbar becomes glassy*/
 
 .glassy :global(.navbar-toggler:focus) {
@@ -94,4 +96,8 @@ a.nav-link-item:hover::after {
 
 .glassy a.nav-link-item:hover {
   color: var(--nav-text-hover-color);
+}
+
+.glassy .theme-toggler {
+  color: var(--glassy-text-color);
 }

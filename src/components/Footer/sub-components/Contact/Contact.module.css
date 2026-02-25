@@ -5,7 +5,7 @@
 .social-media-icons svg {
     width: 32px;
     height: 32px;
-    color: var(--social-icon-color)
+    color: var(--icon-color);
 }
 
 .social-media-icons svg :hover {

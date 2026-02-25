@@ -80,11 +80,11 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/*Social media icons */
+/*icons styles */
 :root[data-bs-theme="dark"] {
-    --social-icon-color: white;
+    --icon-color: white;
 }
 
 :root[data-bs-theme="light"] {
-    --social-icon-color: black;
+    --icon-color: black;
 }
