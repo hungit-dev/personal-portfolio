@@ -107,7 +107,7 @@ a.nav-link-item:hover::after {
 
 /*In small screen size, the toggler and hamburger stay fixed on the top*/
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   .toggler-hamburger-container {
     top: 15px;
     position: absolute;
