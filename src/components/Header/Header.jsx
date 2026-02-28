@@ -20,15 +20,19 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
  //implement theme toggler 
-  const [isDarkMode, setIsDarkMode] = useState(false);
+ //default isDarkMode=true/false depending on whatever is saved
+  const [isDarkMode, setIsDarkMode] = useState(()=>{
+    const saved=localStorage.getItem("theme");
+    return saved == "dark";
+  });
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
-    if (!isDarkMode) {
-      document.querySelector("html").setAttribute("data-bs-theme","dark");
-    } else {
-      document.querySelector("html").setAttribute("data-bs-theme","light");
-    }
   };
+  useEffect(()=>{
+    const theme=isDarkMode? "dark" : "light"
+    localStorage.setItem("theme",theme)
+    document.querySelector("html").setAttribute("data-bs-theme", theme)
+  },[isDarkMode])
   
   return (
     <header className="fixed-top">
