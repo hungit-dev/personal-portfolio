@@ -6,3 +6,7 @@
   background-color: var(--card-bg-color);
   border: var(--card-border);
 }
+.skill-item:hover {
+  cursor: pointer;
+  border-color: #2e8dcc;
+}

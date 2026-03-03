@@ -3,45 +3,40 @@ import styles from "./Projects.module.css";
 
 const projects = [
   {
-    title: "Portfolio Website",
-    description: "A personal website to showcase my projects.",
-    reason: "Built to demonstrate my front-end skills and React knowledge.",
-    note: "Hosted on Render's free tier. May take a moment to load.",
-    techList: ["React", "Bootstrap", "CSS"],
+    image: "assets/images/file-uploader.png",
+    github_url: "https://github.com/hungit-dev/file-uploader",
+    demo_url: "https://file-uploader-pzv9.onrender.com/",
+    title: "File Uploader Web App",
+    description:
+      "A full-stack web application that allows users to create, read, update, and delete folders and files, with secure user authentication.",
+    reason:
+      "Built to practice full-stack development with Node.js, Express.js, Passport.js, Prisma ORM, and cloud storage integration.",
+    note: "Note: Hosted on Render's free tier. Initial load may take 30-60 seconds as the server wakes up.",
+    techList: [
+      "Node.js",
+      "Express.js",
+      "Passport.js",
+      "Prisma",
+      "PostgreSQL",
+      "Cloudinary",
+      "Bootstrap",
+    ],
   },
   {
-    title: "Todo List App",
-    description: "An app to manage daily tasks.",
-    reason: "Helps organize tasks and learn CRUD operations.",
-    note: "Using local storage to save data.",
-    techList: ["React", "JavaScript", "HTML", "CSS"],
+    image: "assets/images/coming-soon.png",
+    github_url: "https://github.com/hungit-dev",
+    title: "More Projects Coming Soon",
+    description:
+      "I'm constantly building and learning. Check out my GitHub for additional projects and experiments.",
+    reason: "",
+    isComingSoonCard: true,
   },
-  {
-    title: "Weather App",
-    description: "Shows current weather and forecast for any city.",
-    reason: "Learned how to fetch data from APIs.",
-    note: "Powered by OpenWeatherMap API.",
-    techList: ["React", "API", "CSS"],
-  },
-  {
-  title: "Task Manager App",
-  description: "Allows users to create, edit, and delete daily tasks.",
-  reason: "Practiced state management and component reusability.",
-  note: "Data is stored using localStorage.",
-  techList: ["React", "JavaScript", "Bootstrap"],
-},
-{
-  title: "Movie Search App",
-  description: "Searches movies and displays detailed information like ratings and release dates.",
-  reason: "Improved skills in working with APIs and handling async data.",
-  note: "Powered by the TMDB API.",
-  techList: ["React", "API", "Bootstrap"],
-},
 ];
 export default function Projects() {
   return (
     <>
-      <section id="projects"
+      <section
+        id="projects"
         className={`${styles["projects-section"]} container d-flex flex-column  gap-3 p-4`}
       >
         <h2 className={`${styles["projects-title"]} fs-2 fw-bold text-center`}>
@@ -51,11 +46,15 @@ export default function Projects() {
           {projects.map((project, index) => (
             <ProjectCard
               key={index}
+              image={project.image}
+              github_url={project.github_url}
+              demo_url={project.demo_url}
               title={project.title}
               description={project.description}
               reason={project.reason}
               note={project.note}
               techList={project.techList}
+              isComingSoonCard={project.isComingSoonCard}
             />
           ))}
         </div>
