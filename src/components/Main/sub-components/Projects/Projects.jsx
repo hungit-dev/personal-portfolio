@@ -23,6 +23,25 @@ const projects = [
     ],
   },
   {
+    image: "assets/images/battleship-game.png",
+    github_url: "https://github.com/hungit-dev/battleship",
+    demo_url: "https://hungitdev-battleship.netlify.app/",
+    title: "Battleship Game",
+    description:
+      "A fully functional Battleship game built using Test Driven Development (TDD). The game implements core game logic including ships, gameboards, players, turn-based attacks, and a computer opponent capable of making valid random moves.",
+    reason:
+      "Built to practice advanced JavaScript concepts, modular architecture, and TDD using Jest. Focused on separating application logic from DOM manipulation and writing unit tests for core game functionality.",
+    techList: [
+      "JavaScript",
+      "Jest",
+      "Babel",
+      "TDD",
+      "ES Modules",
+      "HTML",
+      "CSS",
+    ],
+  },
+  {
     image: "assets/images/coming-soon.png",
     github_url: "https://github.com/hungit-dev",
     title: "More Projects Coming Soon",

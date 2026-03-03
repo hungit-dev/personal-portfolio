@@ -1,5 +1,36 @@
 import styles from "./About.module.css";
 import Skill from "./Skill";
+
+const skills = [
+  // Core Languages
+  "JavaScript",
+  "Python",
+  "C#",
+  // Frontend
+  "HTML",
+  "CSS",
+  "React",
+  "Bootstrap",
+  "Tailwind",
+  // Backend
+  "Node.js",
+  "Express.js",
+  "Django",
+  "Passport.js",
+  // Templating
+  "EJS",
+  "Jinja2",
+  // Database
+  "PostgreSQL",
+  // Testing / Architecture
+  "Jest",
+  "Babel",
+  "TDD",
+  "ES Modules",
+  // Tools
+  "Git",
+];
+
 export default function About() {
   return (
     <>
@@ -26,23 +57,9 @@ export default function About() {
         <ul
           className={`${styles["skills-list"]} d-flex flex-wrap gap-2 flex-md-row flex-column`}
         >
-          <Skill skillName="JavaScript" />
-          <Skill skillName="Python" />
-          <Skill skillName="HTML" />
-          <Skill skillName="CSS" />
-          <Skill skillName="React" />
-          <Skill skillName="Node.js" />
-          <Skill skillName="Express.js" />
-          <Skill skillName="Django" />
-          <Skill skillName="C#" />
-          <Skill skillName="Blazor" />
-          <Skill skillName="Bootstrap" />
-          <Skill skillName="Tailwind" />
-          <Skill skillName="EJS" />
-          <Skill skillName="Jinja2" />
-          <Skill skillName="Passport.js" />
-          <Skill skillName="PostgreSQL" />
-          <Skill skillName="Git" />
+          {skills.map((skill) => (
+            <Skill key={skill} skillName={skill} className={styles["skill"]} />
+          ))}
         </ul>
       </section>
     </>
