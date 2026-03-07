@@ -1,5 +1,6 @@
 .hero-section {
-  min-height: 85vh;
+  position: relative;
+  min-height: 100vh;
   background: transparent;
   color: var(--primary-text-color);
 }
@@ -15,7 +16,18 @@
   margin-right: 1rem;
   animation: blink 1.5s infinite;
 }
-
+.arrow-down-icon {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  color: oklch(0.556 0 0);
+  animation: arrow-scroll-down 1.5s infinite;
+}
+.arrow-down-svg {
+  height: 1.5em;
+  width: 1.5em;
+}
 /*blink effect for the span marker*/
 @keyframes blink {
   0%,
@@ -25,6 +37,22 @@
 
   50%,
   100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-scroll-down {
+  0% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(16px);
     opacity: 0;
   }
 }

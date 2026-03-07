@@ -58,6 +58,7 @@
 .card-github-button {
   --bs-btn-hover-bg: transparent !important;
   background: #265dad;
+  height: 40px;
 }
 
 .card-github-button:hover {
@@ -83,6 +84,7 @@
   background: transparent;
   border: var(--live-btn-border);
   border-radius: 4px;
+  height: 40px;
   color: var(--live-btn-text-color);
   --bs-btn-active-bg: white !important;
   --bs-btn-active-border-color: black !important;

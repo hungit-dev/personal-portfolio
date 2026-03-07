@@ -45,6 +45,7 @@
 body {
   background-color: var(--primary-bg-color);
   position: relative;
+  font-family: "Lato", sans-serif;
 }
 
 body::before {
@@ -95,7 +96,7 @@ body::before {
     transform 0.3s ease,
     box-shadow 0.2s ease;
   width: 150px;
-  height: 40px;
+  height: 45px;
 }
 
 .btn-primary:hover {
