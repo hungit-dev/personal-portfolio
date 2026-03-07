@@ -1,5 +1,5 @@
 .about-section {
-  background-color: var(--primary-bg-color);
+  background: transparent;
   color: var(--primary-text-color);
 }
 

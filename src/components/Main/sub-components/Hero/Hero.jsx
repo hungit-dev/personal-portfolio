@@ -23,7 +23,7 @@ export default function Hero() {
         id="home"
         className={`${styles["hero-section"]} d-flex align-items-center justify-content-center flex-column p-3`}
       >
-        <h1 className="hero-title fs-1 fw-bold">
+        <h1 className="hero-title fs-1 fw-bold me-2">
           {" "}
           <span
             className={`${styles["gradient-text"]} ${styles["span-marker"]}`}
@@ -32,7 +32,7 @@ export default function Hero() {
           </span>
           Hi, I'm Henry Huynh
         </h1>
-        <p className={`${styles["gradient-text"]} fs-4 ms-5`}>{text}</p>
+        <p className={`${styles["gradient-text"]} fs-4 ms-1 ms-sm-5`}>{text}</p>
         <p className="fs-5 text-center">
           Building scalable software applications with modern technologies
         </p>

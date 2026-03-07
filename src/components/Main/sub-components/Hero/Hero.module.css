@@ -1,6 +1,6 @@
 .hero-section {
   min-height: 85vh;
-  background-color: var(--primary-bg-color);
+  background: transparent;
   color: var(--primary-text-color);
 }
 
