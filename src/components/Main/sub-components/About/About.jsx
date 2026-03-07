@@ -1,5 +1,5 @@
 import styles from "./About.module.css";
-import Skill from "./Skill";
+import TechStack from "./TechStack";
 
 const skills = [
   // Core Languages
@@ -31,7 +31,7 @@ const skills = [
   "Git",
 ];
 
-export default function About() {
+export default function About({ isDarkMode }) {
   return (
     <>
       <section
@@ -53,14 +53,7 @@ export default function About() {
           hands-on projects. I enjoy tackling challenges, learning new
           technologies, and creating software that makes an impact.
         </p>
-        <h3 className="fs-4 fw-bold">Skills & Tools</h3>
-        <ul
-          className={`${styles["skills-list"]} d-flex flex-wrap gap-2 flex-md-row flex-column`}
-        >
-          {skills.map((skill) => (
-            <Skill key={skill} skillName={skill} className={styles["skill"]} />
-          ))}
-        </ul>
+        <TechStack isDarkMode={isDarkMode} />
       </section>
     </>
   );

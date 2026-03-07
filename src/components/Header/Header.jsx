@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 import styles from "./Header.module.css";
 import { useState, useEffect } from "react";
 
-export default function Header() {
+export default function Header({ toggleTheme, isDarkMode }) {
   //implement scroll effect for navbar
   const [isScrolled, setIsScrolled] = useState(false);
   //use effect run once when the component mounts
@@ -19,21 +19,6 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  //implement theme toggler
-  //default isDarkMode=true/false depending on whatever is saved
-  const [isDarkMode, setIsDarkMode] = useState(() => {
-    const saved = localStorage.getItem("theme");
-    return saved == "dark";
-  });
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-  useEffect(() => {
-    const theme = isDarkMode ? "dark" : "light";
-    localStorage.setItem("theme", theme);
-    document.querySelector("html").setAttribute("data-bs-theme", theme);
-  }, [isDarkMode]);
-
   return (
     <header className="fixed-top">
       <Navbar

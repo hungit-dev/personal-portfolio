@@ -1,14 +1,14 @@
-import Hero from "./sub-components/Hero/Hero"
-import About from "./sub-components/About/About"
-import Projects from "./sub-components/Projects/Projects"
-export default function Main() {
-    return (
-        <>
-        <main className="pb-5">
+import Hero from "./sub-components/Hero/Hero";
+import About from "./sub-components/About/About";
+import Projects from "./sub-components/Projects/Projects";
+export default function Main({ isDarkMode }) {
+  return (
+    <>
+      <main className="pb-5">
         <Hero />
-        <About />
+        <About isDarkMode={isDarkMode} />
         <Projects />
-        </main>
-        </>
-    )
+      </main>
+    </>
+  );
 }
