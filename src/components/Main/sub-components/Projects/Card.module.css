@@ -33,7 +33,7 @@
 .tech-tag:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(2, 6, 23, 0.08);
-  background: var(--primary-button-bg);
+  background: linear-gradient(90deg, #1e4a8a, #1ea6c8);
   color: white;
   cursor: pointer;
 }

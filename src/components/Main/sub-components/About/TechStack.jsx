@@ -1,4 +1,3 @@
-import { name } from "ejs";
 import styles from "./TechStack.module.css";
 import StackIcon from "tech-stack-icons";
 

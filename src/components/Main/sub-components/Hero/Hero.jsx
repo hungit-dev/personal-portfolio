@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Button from "react-bootstrap/Button";
 import styles from "./Hero.module.css";
 export default function Hero() {
   const fullText = "Aspiring Full Stack Developer";
@@ -23,6 +22,7 @@ export default function Hero() {
         id="home"
         className={`${styles["hero-section"]} d-flex align-items-center justify-content-center flex-column p-3`}
       >
+        <span className={`${styles["relative"]}`}>View Resume ↗</span>
         <h1 className="hero-title fs-1 fw-bold me-2">
           {" "}
           <span
@@ -36,11 +36,7 @@ export default function Hero() {
         <p className="fs-5 text-center">
           Building scalable software applications with modern technologies
         </p>
-        <a href="#projects">
-          <Button variant="primary" className="p-2">
-            View my work
-          </Button>
-        </a>
+        <a href="#projects"></a>
         <span className={styles["arrow-down-icon"]}>
           <svg
             xmlns="http://www.w3.org/2000/svg"

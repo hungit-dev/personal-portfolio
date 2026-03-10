@@ -1,3 +1,19 @@
+.relative {
+  border-radius: 12px;
+  background: linear-gradient(90deg, #2a5fb0, #33c1e3);
+  padding: 4px 10px;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.relative:hover {
+  background: linear-gradient(90deg, #1ea6c8, #1e4a8a);
+  cursor: pointer;
+}
+.relative:active {
+  background: linear-gradient(90deg, #17407a, #1487a3);
+}
 .hero-section {
   position: relative;
   min-height: 100vh;
