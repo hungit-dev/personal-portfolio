@@ -22,7 +22,14 @@ export default function Hero() {
         id="home"
         className={`${styles["hero-section"]} d-flex align-items-center justify-content-center flex-column p-3`}
       >
-        <span className={`${styles["relative"]}`}>View Resume ↗</span>
+        <a
+          className={`${styles["relative"]}`}
+          href="assets/files/henry_huynh_resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Resume ↗
+        </a>
         <h1 className="hero-title fs-1 fw-bold me-2">
           {" "}
           <span

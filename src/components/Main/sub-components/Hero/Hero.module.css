@@ -6,6 +6,7 @@
   color: white;
   font-weight: bold;
   margin-bottom: 16px;
+  text-decoration: none;
 }
 .relative:hover {
   background: linear-gradient(90deg, #1ea6c8, #1e4a8a);
