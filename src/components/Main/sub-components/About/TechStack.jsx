@@ -34,7 +34,7 @@ export default function TechStack({ isDarkMode }) {
           <div className={" d-flex flex-column text-center gap-2"}>
             <h4 className="fs-5">Frontend</h4>
             <div
-              className={`${styles["tech-skills"]} d-flex flex-wrap justify-content-center `}
+              className={`${styles["tech-skills"]} d-flex flex-wrap justify-content-center align-items-center`}
             >
               {techStacks.frontend.map((tech) => (
                 <div
@@ -46,7 +46,7 @@ export default function TechStack({ isDarkMode }) {
                     className={styles.icon}
                     variant={isDarkMode ? "dark" : "light"}
                   />
-                  <span>{tech.label}</span>
+                  <p className="m-0 fs-6">{tech.label}</p>
                 </div>
               ))}
             </div>
@@ -54,7 +54,7 @@ export default function TechStack({ isDarkMode }) {
           <div className={"$ d-flex flex-column text-center gap-2"}>
             <h4 className="fs-5">Backend</h4>
             <div
-              className={`${styles["tech-skills"]} d-flex flex-wrap justify-content-center `}
+              className={`${styles["tech-skills"]} d-flex flex-wrap justify-content-center align-items-center`}
             >
               {techStacks.backend.map((tech) => (
                 <div
@@ -66,7 +66,7 @@ export default function TechStack({ isDarkMode }) {
                     className={styles.icon}
                     variant={isDarkMode ? "dark" : "light"}
                   />
-                  <span>{tech.label}</span>
+                  <p className="m-0 fs-6">{tech.label}</p>
                 </div>
               ))}
             </div>
@@ -74,7 +74,7 @@ export default function TechStack({ isDarkMode }) {
           <div className={" d-flex flex-column text-center gap-2"}>
             <h4 className="fs-5">Systems & Tools</h4>
             <div
-              className={`${styles["tech-skills"]} d-flex flex-wrap justify-content-center`}
+              className={`${styles["tech-skills"]} d-flex flex-wrap justify-content-center align-items-center`}
             >
               {techStacks.tools.map((tech) => (
                 <div
@@ -86,7 +86,7 @@ export default function TechStack({ isDarkMode }) {
                     className={styles.icon}
                     variant={isDarkMode ? "dark" : "light"}
                   />
-                  <span>{tech.label}</span>
+                  <p className="m-0 fs-6">{tech.label}</p>
                 </div>
               ))}
             </div>

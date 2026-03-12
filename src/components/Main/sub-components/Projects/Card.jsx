@@ -31,13 +31,13 @@ export default function ProjectCard({
             )}
             {description && <Card.Text>{description}</Card.Text>}
             {reason && <Card.Text>{reason}</Card.Text>}
-            {note && <div className={styles["note"]}>{note}</div>}
+            {note && <p className={styles["note"]}>{note}</p>}
             {techList && (
               <div className={styles["tech-stack"]}>
                 {techList.map((tech, index) => (
-                  <span key={index} className={styles["tech-tag"]}>
+                  <p key={index} className={`${styles["tech-tag"]} m-0`}>
                     {tech}
-                  </span>
+                  </p>
                 ))}
               </div>
             )}
@@ -54,6 +54,7 @@ export default function ProjectCard({
                   style={isComingSoonCard ? { width: "90%" } : {}} //isComingSoonCard will have a button with 90% width of its container
                 >
                   <Button
+                    aria-label="Go to Github Repository"
                     className={`${styles["card-github-button"]} me-2 w-100 d-flex justify-content-center align-items-center gap-1`}
                     style={isComingSoonCard ? { width: "100%" } : {}} //only isComingSoonCard has a button with 100% width
                   >
@@ -79,6 +80,7 @@ export default function ProjectCard({
                   className="w-50 text-decoration-none"
                 >
                   <Button
+                    aria-label="Go to Live Demo"
                     className={`${styles["card-live-button"]} w-100 d-flex justify-content-center align-items-center gap-1`}
                   >
                     <svg

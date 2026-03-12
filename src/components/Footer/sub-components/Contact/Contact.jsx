@@ -15,6 +15,7 @@ export default function Contact() {
       >
         {/* GitHub */}
         <a
+          aria-label="GitHub Profile"
           href="https://github.com/hungit-dev"
           target="_blank"
           rel="noopener noreferrer"
@@ -30,6 +31,7 @@ export default function Contact() {
         </a>
         {/* LinkedIn */}
         <a
+          aria-label="LinkedIn Profile"
           href="https://www.linkedin.com/in/lamhuynh01/"
           target="_blank"
           rel="noopener noreferrer"
@@ -44,7 +46,7 @@ export default function Contact() {
           </svg>
         </a>
         {/* Email */}
-        <a href="mailto:lam.h.huynh01@gmail.com">
+        <a href="mailto:lam.h.huynh01@gmail.com" aria-label="Send Email">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="bi bi-envelope"
