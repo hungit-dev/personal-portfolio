@@ -5,9 +5,35 @@ import styles from "./Header.module.css";
 import { useState, useEffect } from "react";
 
 export default function Header({ toggleTheme, isDarkMode }) {
-  //implement scroll effect for navbar
   const [isScrolled, setIsScrolled] = useState(false);
-  //use effect run once when the component mounts
+  const [activeSection, setActiveSection] = useState("home");
+  // implement scrollspy to highlight the active section in the navbar
+  useEffect(() => {
+    const sectionIds = ["home", "about", "projects", "contact"];
+    const NAVBAR_OFFSET = 120;
+    const updateActiveSection = () => {
+      const atBottom =
+        Math.ceil(window.innerHeight + window.scrollY) >=
+        document.documentElement.scrollHeight - 2;
+      if (atBottom) return setActiveSection("contact");
+      const anchor = window.scrollY + NAVBAR_OFFSET;
+      const active =
+        sectionIds.findLast(
+          (id) =>
+            (document.getElementById(id)?.offsetTop ?? Infinity) <= anchor,
+        ) ?? sectionIds[0];
+
+      setActiveSection(active);
+    };
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+    updateActiveSection();
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+  //when user scrolls down, navbar becomes glassy, when user scrolls back to top, navbar becomes normal
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -19,6 +45,7 @@ export default function Header({ toggleTheme, isDarkMode }) {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <header className="fixed-top">
       <Navbar
@@ -31,16 +58,32 @@ export default function Header({ toggleTheme, isDarkMode }) {
           </Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav" className="mt-2 mt-lg-0">
             <Nav className="ms-auto gap-lg-2  ">
-              <Nav.Link href="#home" className={styles["nav-link-item"]}>
+              <Nav.Link
+                href="#home"
+                className={styles["nav-link-item"]}
+                active={activeSection === "home"}
+              >
                 Home
               </Nav.Link>
-              <Nav.Link href="#about" className={styles["nav-link-item"]}>
+              <Nav.Link
+                href="#about"
+                className={styles["nav-link-item"]}
+                active={activeSection === "about"}
+              >
                 About
               </Nav.Link>
-              <Nav.Link href="#projects" className={styles["nav-link-item"]}>
+              <Nav.Link
+                href="#projects"
+                className={styles["nav-link-item"]}
+                active={activeSection === "projects"}
+              >
                 Projects
               </Nav.Link>
-              <Nav.Link href="#contact" className={styles["nav-link-item"]}>
+              <Nav.Link
+                href="#contact"
+                className={styles["nav-link-item"]}
+                active={activeSection === "contact"}
+              >
                 Contact
               </Nav.Link>
             </Nav>
