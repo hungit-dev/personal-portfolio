@@ -12,6 +12,7 @@
 }
 .tech-skills-container {
   background-color: var(--card-bg-color);
+  position: relative;
   border-radius: 12px;
   padding: 20px;
   border: var(--card-border);
