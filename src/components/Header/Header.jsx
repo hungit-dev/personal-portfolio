@@ -2,11 +2,14 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import styles from "./Header.module.css";
+import { motion, useScroll } from "motion/react";
 import { useState, useEffect } from "react";
 
 export default function Header({ toggleTheme, isDarkMode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+  //useScroll for scroll progress indicator (motion)\
+  const { scrollYProgress } = useScroll();
   // implement scrollspy to highlight the active section in the navbar
   useEffect(() => {
     const sectionIds = ["home", "about", "projects", "contact"];
@@ -54,7 +57,7 @@ export default function Header({ toggleTheme, isDarkMode }) {
       >
         <Container>
           <Navbar.Brand href="#home" className={styles.logo}>
-            {"<HenryHuynh />"}
+            {"<Henry Huynh />"}
           </Navbar.Brand>
           <Navbar.Collapse id="basic-navbar-nav" className="mt-2 mt-lg-0">
             <Nav className="ms-auto gap-lg-2  ">
@@ -123,6 +126,19 @@ export default function Header({ toggleTheme, isDarkMode }) {
           </div>
         </Container>
       </Navbar>
+      <motion.div
+        id="scroll-indicator"
+        style={{
+          scaleX: scrollYProgress,
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          height: 2,
+          originX: 0,
+          background: "linear-gradient(90deg, #265dad, #37c5f0)",
+        }}
+      />
     </header>
   );
 }
