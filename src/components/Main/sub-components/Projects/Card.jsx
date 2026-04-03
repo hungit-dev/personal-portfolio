@@ -15,7 +15,7 @@ export default function ProjectCard({
   return (
     <>
       <article>
-        <Card>
+        <Card style={!isComingSoonCard ? { height: "100%" } : {}}>
           {image && (
             <Card.Img
               variant="top"

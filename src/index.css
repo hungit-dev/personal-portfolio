@@ -77,13 +77,21 @@ body::before {
 :root[data-bs-theme="dark"] {
   --card-bg-color: #171717;
   --card-text-color: white;
-  --card-border: 1px solid rgb(174, 177, 185);
+  --card-border: 2px solid #79c7c5;
+  --box-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
 }
 
 :root[data-bs-theme="light"] {
   --card-bg-color: #fdfdfe;
-  --card-border: 1px solid rgb(146, 146, 149);
   --card-text: black;
+  --card-border: 2px solid #b9bebe;
+  --box-shadow:
+    rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+/*Override Global Bootstrap card styles */
+.card {
+  border: var(--card-border);
+  box-shadow: var(--box-shadow);
 }
 
 /* Override Global Bootstrap primary button styles */
