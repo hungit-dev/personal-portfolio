@@ -50,7 +50,7 @@ export default function TechStack({ isDarkMode }) {
                     className={styles.icon}
                     variant={isDarkMode ? "dark" : "light"}
                   />
-                  <p className="m-0 fs-6">{tech.label}</p>
+                  <span className="m-0 fs-6">{tech.label}</span>
                 </div>
               ))}
             </div>
@@ -74,7 +74,7 @@ export default function TechStack({ isDarkMode }) {
                     className={styles.icon}
                     variant={isDarkMode ? "dark" : "light"}
                   />
-                  <p className="m-0 fs-6">{tech.label}</p>
+                  <span className="m-0 fs-6">{tech.label}</span>
                 </div>
               ))}
             </div>
@@ -98,7 +98,7 @@ export default function TechStack({ isDarkMode }) {
                     className={styles.icon}
                     variant={isDarkMode ? "dark" : "light"}
                   />
-                  <p className="m-0 fs-6">{tech.label}</p>
+                  <span className="m-0 fs-6">{tech.label}</span>
                 </div>
               ))}
             </div>

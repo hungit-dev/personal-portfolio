@@ -35,9 +35,9 @@ export default function ProjectCard({
             {techList && (
               <div className={styles["tech-stack"]}>
                 {techList.map((tech, index) => (
-                  <p key={index} className={`${styles["tech-tag"]} m-0`}>
+                  <span key={index} className={`${styles["tech-tag"]} m-0`}>
                     {tech}
-                  </p>
+                  </span>
                 ))}
               </div>
             )}
